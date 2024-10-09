@@ -1,0 +1,131 @@
+:root {
+  --red-color: hsl(0, 100%, 66%);
+  --linear-gradient-1: hsl(249, 99%, 64%);
+  --linear-gradient-2: hsl(278, 94%, 30%);
+  --white-color: hsl(0, 0%, 100%);
+  --light-grayish-violet-color: hsl(270, 3%, 87%);
+  --dark-grayish-violet-color: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  background-image: url('./images/bg-main-desktop.png');
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-clip: content-box;
+  background-size: contain;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-container {
+  
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+}
+
+input::placeholder {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--dark-grayish-violet-color);
+}
+
+input {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--very-dark-violet);
+  height: 45px;
+  border-radius: 9px;
+  border-style: solid;
+  border-width: thin;
+  border-color: var(--light-grayish-violet-color);
+  padding: 0px 15px;
+  &:focus-visible {
+    border-style: solid;
+    border-width: thin;
+    border-color: var(--linear-gradient-2);
+    outline: none;
+  }
+  &:valid + .error-text {
+    display: none;
+  }
+}
+
+label {
+  color: var(--very-dark-violet);
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  padding-top: 20px;
+}
+
+.error-text {
+  color: var(--red-color);
+  font-size: 12px;
+}
+
+.expdate-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.cvc-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.cvc-input {
+  width: 160px;
+}
+
+.expdate-cvc-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.month-year-input-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.month-input,
+.year-input {
+  width: 50px;
+}
+
+.button {
+  background-color: var(--very-dark-violet);
+  color: var(--white-color);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border: none;
+  border-radius: 9px;
+  height: 54px;
+  cursor: pointer;
+  margin-top: 30px;
+  &:hover {
+    background-color: var(--linear-gradient-1);
+  }
+}
